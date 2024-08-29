@@ -48,3 +48,18 @@ curl -X POST http://localhost:11434/api/generate -d '{
 "stream": false
 }'
 ````
+
+## Para guardar en GitHub
+
+````bash
+git add .
+````
+
+````bash
+git commit -m "UPDATE REAMDE.md"
+````
+
+````bash
+git push -u origin main
+````
+
