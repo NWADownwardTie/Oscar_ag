@@ -66,6 +66,8 @@ git push -u origin main
 ## 5. Consultar a groq
 estructura basica para realizar una consulta a groq mediante su API REST
 
+### Comando completo
+
 ````bash
 curl "https://api.groq.com/openai/v1/chat/completions" \
   -X POST \
@@ -86,6 +88,8 @@ curl "https://api.groq.com/openai/v1/chat/completions" \
          "stop": null
        }'
   ````
+
+### Comando que usamos en clase
 
 ````bash
   curl "https://api.groq.com/openai/v1/chat/completions" \
