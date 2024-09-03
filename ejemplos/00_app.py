@@ -7,6 +7,7 @@ curl -X POST http://localhost:11434/api/generate -d '{
 """
 
 import requests
+import json
 
 url = 'http://localhost:11434/api/generate'
 myobj = {
@@ -16,5 +17,8 @@ myobj = {
 }
 
 x = requests.post(url, json = myobj)
+x = json.loads(x.text)
 
-print(x.text)
+print(x["response"])
+
+
