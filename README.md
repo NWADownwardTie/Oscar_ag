@@ -56,7 +56,7 @@ git add .
 ````
 
 ````bash
-git commit -m "UPDATE REAMDE.md"
+git commit -m "UPDATE README.md"
 ````
 
 ````bash
