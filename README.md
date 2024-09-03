@@ -107,3 +107,10 @@ curl "https://api.groq.com/openai/v1/chat/completions" \
          "stream": false
        }'
 ````
+## para Python
+
+cd es para entrar a una carpeta
+
+ls es para la lista
+
+para ejecutar un archivo de py se usa python3 (el nombre del archivo)
