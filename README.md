@@ -37,7 +37,7 @@ curl -X POST http://localhost:11434/api/generate -d '{
 }'
 ````
 
-## 5. Realizar un request sin stream
+## 4.1 Realizar un request sin stream
 
 Para realizar una consulta a la API REST sin stream se hace de la siguiente forma: 
 
@@ -63,3 +63,43 @@ git commit -m "UPDATE REAMDE.md"
 git push -u origin main
 ````
 
+## 5. Consultar a groq
+estructura basica para realizar una consulta a groq mediante su API REST
+
+````bash
+curl "https://api.groq.com/openai/v1/chat/completions" \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer ${GROQ_API_KEY}" \
+  -d '{
+         "messages": [
+           {
+             "role": "user",
+             "content": ""
+           }
+         ],
+         "model": "llama3-8b-8192",
+         "temperature": 1,
+         "max_tokens": 1024,
+         "top_p": 1,
+         "stream": true,
+         "stop": null
+       }'
+  ````
+
+````bash
+  curl "https://api.groq.com/openai/v1/chat/completions" \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer ${GROQ_API_KEY}" \
+  -d '{
+         "messages": [
+           {
+             "role": "user",
+             "content": "¿por que el cielo es azul?"
+           }
+         ],
+         "model": "llama3-8b-8192",
+         "stream": false
+       }'
+````
